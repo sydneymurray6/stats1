@@ -1,0 +1,146 @@
+---
+title: "Project"
+author: "Jessica Rus and Sydney Murray"
+date: "11/19/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+```{r}
+
+
+```
+
+
+
+```{r}
+mean(unemployment_data_us_original$`High School`)
+sd(unemployment_data_us_original$`High School`)
+mean(unemployment_data_us_original$`Associates Degree`)
+sd(unemployment_data_us_original$`Associates Degree`)
+mean(unemployment_data_us_original$Black)
+sd(unemployment_data_us_original$Black)
+mean(unemployment_data_us_original$White)
+sd(unemployment_data_us_original$White)
+mean(unemployment_data_us_original$Women)
+sd(unemployment_data_us_original$Women)
+mean(unemployment_data_us_original$Men)
+sd(unemployment_data_us_original$Men)
+mean(unemployment_data_us_original$Unemployment)
+sd(unemployment_data_us_original$Unemployment)
+
+
+```
+
+```{r}
+#library(readxl)
+#Data_gfg <- read_excel("unemployment_data_us_original.xlsx")
+```
+
+
+```{r}
+#library(readxl)
+#Data_gfg <- read_excel("unemployment_data_us_original.xlsx")
+x=Data_gfg$Month
+y=Data_gfg$Women
+plot(x,y, type ="l")
+```
+##GENDER BOXPLOTS
+```{r}
+library(readxl)
+Data_gfg <- read_excel("unemployment_data_us_original.xlsx")
+boxplot(unemployment_data_us_original$Women~unemployment_data_us_original$Month,
+        xlab = "Month",
+     ylab = "Women",
+     main = "Plot")
+```
+
+
+
+```{r}
+boxplot(Data_gfg$Men~Data_gfg$Month,
+        xlab = "Month",
+     ylab = "Men",
+     main = "Plot")
+```
+##EDUCATION BOXPLOTS
+
+```{r}
+boxplot(Data_gfg$`High School`~Data_gfg$Month,
+        xlab = "Month",
+     ylab = "High School Diploma",
+     main = "Plot")
+```
+
+
+```{r}
+boxplot(Data_gfg$`Associates Degree`~Data_gfg$Month,
+        xlab = "Month",
+     ylab = "Associates Degree",
+     main = "Plot")
+```
+
+##RACE BOXPLOTS
+
+```{r}
+boxplot(Data_gfg$White~Data_gfg$Month,
+        xlab = "Month",
+     ylab = "White",
+     main = "Plot")
+
+#boxplot(White ~ Month, data = unemployment_data_us_original,
+  #xlab = "Month", ylab = "White"
+#)
+```
+
+
+```{r}
+boxplot(Data_gfg$Black~Data_gfg$Month,
+        xlab = "Month",
+     ylab = "Black",
+     main = "Plot")
+```
+
+##HISTOGRAMS FOR GENDER
+
+
+```{r}
+hist(Data_gfg$Women)
+```
+
+
+
+```{r}
+hist(Data_gfg$Men)
+```
+
+##HISTOGRAMS FOR RACE
+
+```{r}
+hist(Data_gfg$White)
+```
+
+```{r}
+hist(Data_gfg$Black)
+```
+
+##HISTOGRAMS FOR EDUCATION
+
+```{r}
+hist(Data_gfg$`High School`)
+```
+
+
+```{r}
+hist(Data_gfg$`Associates Degree`)
+```
+
+```{r}
+hist(Data_gfg$Unemployment)
+```
